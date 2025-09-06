@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
+    <title>Todo List Palupi</title>
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="css/style.css">
+     
 </head>
+
 <body>
-    
+
+    <!-- Main Section -->
+    <main>
+
+        <!-- Todo Input Section -->
+         <div class="container">
+        <section id="todo-input-section">
+            <form>
+               <h1 align="center" style="font-size: xx-large;">Todo List</h1>
+                <input type="text" class="input" id="todo-input" placeholder="Tambah Tugas" required>
+                <input type="date" class="input" id="todo-date-input" required> <br>
+                <select id="status" class="input" required>
+      <option hidden> </option>
+      <option value="Mendesak">Mendesak</option>
+      <option value="Tidak Mendesak">Tidak Mendesak</option>
+</select>
+                
+                <button type="button" id="add-todo-button" onclick="validateInput();">Tambah</button>
+            </form>
+        </section>
+
+        <section>
+         
+            <button id="filterTodo" onclick="filterTodo();">
+                Filter
+            </button>
+
+            <button id="deleteAllTodo" onclick="deleteAllTodo();">
+                Hapus Semua
+            </button>
+        </section>
+
+        <!-- Todo List Section -->
+        <section class="py-[16px]">
+            <ul id="todo-list" class="text-center" align="center" cellspacing="90">
+              
+            </ul>
+        </section>
+ <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Palupi's Todo List</p>
+    </footer>
+    </main>
+
+    <!-- Javascript External -->
+    <script src="js/script.js"></script>
 </body>
+
 </html>
